@@ -8,7 +8,7 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
     int time = 0, w = 0;
     for (int i = 0; i < truck_weights.size(); i++) {
         time++;
-        if (time == bridge.front().second + bridge_length) {
+        if (time - bridge.front().second == bridge_length) {
             w -= bridge.front().first;
             bridge.pop();
         }
